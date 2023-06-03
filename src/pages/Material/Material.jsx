@@ -10,7 +10,9 @@ const Material = () => {
 
   return (
     <div className='max-w-[1240px] mx-auto flex flex-col md:flex md:flex-row px-10 py-20 justify-evenly'>
-      {loading ? (
+      {error ? (
+        "Something went wrong!"
+      ) : loading ? (
         "loading"
       ) : (
         <>

@@ -15,9 +15,6 @@ const Products = () => {
   const { data, loading, error } = useFetch(
     `/sub-categories?[filters][categories][id][$eq]=${catId}`
   );
-        if (error) {
-          return <div>Error: {error.message}</div>;
-        }
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -53,7 +50,9 @@ const Products = () => {
 
   return (
     <div className='max-w-[1240px] mx-auto p-4 sm:p-6 md:p-8 flex flex-col md:flex-row'>
-      {loading ? (
+      {error ? (
+        "Something went wrong!"
+      ) : loading ? (
         "loading"
       ) : (
         <>
