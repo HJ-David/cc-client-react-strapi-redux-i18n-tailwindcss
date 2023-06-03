@@ -15,6 +15,9 @@ const Product = () => {
 
   const dispatch = useDispatch();
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    }
 
   return (
     <div className='max-w-[1240px] mx-auto flex flex-col md:flex md:flex-row px-10 py-20 justify-evenly'>
