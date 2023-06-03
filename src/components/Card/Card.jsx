@@ -13,7 +13,6 @@ const Card = ({item}) => {
           )}
           <img
             src={
-              process.env.REACT_APP_UPLOAD_URL +
               item.attributes?.img?.data?.attributes?.url
             }
             alt=''
@@ -21,7 +20,6 @@ const Card = ({item}) => {
           />
           <img
             src={
-              process.env.REACT_APP_UPLOAD_URL +
               item.attributes?.img2?.data?.attributes?.url
             }
             alt=''

@@ -29,7 +29,6 @@ const Product = () => {
               <img
                 className=' h-150 object-cover cursor-pointer mb-5'
                 src={
-                  process.env.REACT_APP_UPLOAD_URL +
                   data?.attributes?.img?.data?.attributes?.url
                 }
                 alt=''
@@ -38,7 +37,6 @@ const Product = () => {
               <img
                 className='h-150 object-cover cursor-pointer mb-5'
                 src={
-                  process.env.REACT_APP_UPLOAD_URL +
                   data?.attributes?.img2?.data?.attributes?.url
                 }
                 alt=''
@@ -48,7 +46,6 @@ const Product = () => {
             <div className='w-5/6 '>
               <img
                 src={
-                  process.env.REACT_APP_UPLOAD_URL +
                   data?.attributes[selectedImg]?.data?.attributes?.url
                 }
                 alt=''

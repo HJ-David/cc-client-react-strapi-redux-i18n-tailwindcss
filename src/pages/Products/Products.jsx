@@ -58,8 +58,8 @@ const Products = () => {
         <>
           <div className='md:sticky md:top-20 md:h-full mr-5 px-6 w-full md:w-40 md:pr-1'>
             <div className='mb-8 w-1/10'>
-              <h2 className='font-medium mb-4 text-lg leading-6'>
-                Class Categories
+              <h2 className='font-medium mb-4 text-base leading-6'>
+              {/* Categories */}
               </h2>
               {data?.map((item) => (
                 <div className='space-y-2' key={item.id}>
