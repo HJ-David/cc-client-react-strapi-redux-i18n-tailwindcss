@@ -1,7 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+
 const Card = ({item}) => {
+
   return (
     <Link className='link' to={`/product/${item.id}`}>
       <div className='bg-white rounded-lg overflow-hidden shadow-md mb-4 w-[340px] h-[320px] sm:w-[320px] sm:h-[400px] md:w-[320px] md:h-[420px]'>
@@ -12,16 +14,12 @@ const Card = ({item}) => {
             </span>
           )}
           <img
-            src={
-              item.attributes?.img?.data?.attributes?.url
-            }
+            src={item.attributes?.img?.data?.attributes?.url}
             alt=''
             className='w-full h-full object-cover absolute top-0 left-0'
           />
           <img
-            src={
-              item.attributes?.img2?.data?.attributes?.url
-            }
+            src={item.attributes?.img2?.data?.attributes?.url}
             alt=''
             className='w-full h-full object-cover absolute top-0 left-0 z-20 opacity-0 hover:opacity-100 transition duration-300'
           />
